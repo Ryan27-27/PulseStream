@@ -5,7 +5,6 @@
 It simulates communication events such as SMS, WhatsApp, email, voice, and push notifications. Events are ingested through an asynchronous FastAPI service, published to RabbitMQ, processed by an idempotent worker, stored as partitioned Parquet data, and analyzed using PySpark/Spark SQL. Aggregated results are exposed through an analytics API.
 
 > **Portfolio goal:** demonstrate the engineering skills commonly requested for backend, real-time communication, distributed systems, cloud, testing, and data-processing roles.
-
 ---
 
 ## 1. What this project demonstrates
@@ -369,10 +368,7 @@ Suggested experiments:
 - Add Airflow orchestration
 - Add Prometheus and Grafana dashboards
 - Add Redis caching for analytics endpoints
-- Add Kubernetes manifests
-- Add exactly-once sink semantics
 - Add schema evolution with a registry
-- Add a Streamlit dashboard
 
 ---
 
