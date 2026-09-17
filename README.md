@@ -360,8 +360,6 @@ Suggested experiments:
 - Queue backlog under worker slowdown
 - Spark performance across 10K, 100K, and 1M events
 
-Do not put benchmark numbers on a resume until you run the experiments and record the actual results.
-
 ---
 
 ## 10. Suggested future extensions
@@ -378,21 +376,8 @@ Do not put benchmark numbers on a resume until you run the experiments and recor
 
 ---
 
-## 11. Resume positioning
 
-After implementation and measurement, a strong resume entry could be:
 
-**PulseStream — Distributed Communication Analytics Platform**  
-*Python, FastAPI, RabbitMQ, PySpark, Spark SQL, Parquet, PostgreSQL, Docker, pytest*
-
-- Engineered an asynchronous communication-event platform using FastAPI and RabbitMQ, decoupling low-latency ingestion from downstream processing through durable queues and background workers.
-- Built PySpark/Spark SQL pipelines over partitioned Parquet data to compute delivery rates, throughput, regional usage, and p50/p95/p99 latency metrics.
-- Implemented schema validation, idempotent processing, duplicate detection, invalid-record isolation, and data-quality reporting.
-- Added unit and integration tests for validation, deduplication, storage, and Spark aggregations, with automated execution through GitHub Actions.
-- Benchmarked ingestion and analytics performance across increasing event volumes and documented partitioning and processing trade-offs.
-
----
-
-## 12. Engineering notes
+## 11. Engineering notes
 
 This repository is intentionally designed to be runnable on a modest development laptop. The default workflow uses local Parquet and local Spark. HDFS, Kafka, Airflow, and Kubernetes are extension paths rather than mandatory local dependencies.
